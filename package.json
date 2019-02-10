@@ -1,0 +1,17 @@
+{
+  "name": "gridsome-project-showcase",
+  "private": false,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.4.0"
+  },
+  "version": "1.0.0",
+  "description": "Gridsome based ERS-HCL showcase static site",
+  "main": "index.js",
+  "author": "Tarun Kumar Sukhu",
+  "license": "MIT"
+}
