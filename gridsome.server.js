@@ -4,9 +4,29 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const axios = require("axios");
 
-module.exports = function (api) {
-  api.loadSource(store => {
-    // Use the Data store API here: https://gridsome.org/docs/data-store-api
-  })
-}
+module.exports = function(api) {
+  // Use the Data store API here: https://gridsome.org/docs/data-store-api
+  api.loadSource(async store => {
+    const { data } = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    const contentType = store.addContentType({
+      typeName: "BlogPost",
+      route: "/blog/:slug"
+    });
+
+    for (const item of data) {
+      let path = `/blog/${item.id}`;
+      contentType.addNode({
+        id: item.id,
+        title: item.title,
+        path,
+        fields: {
+          body: item.body
+        }
+      });
+    }
+  });
+};
