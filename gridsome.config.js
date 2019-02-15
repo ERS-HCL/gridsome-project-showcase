@@ -8,6 +8,13 @@ module.exports = {
   siteName: "ERS Project Showcase",
   plugins: [
     {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "blog/**/*.md",
+        typeName: "Post"
+      }
+    },
+    {
       use: "@gridsome/source-faker",
       options: {
         numNodes: 50
