@@ -1,5 +1,6 @@
 ---
 title: An awesome article
+excerpt: This is an excerpt
 ---
 
 ## An awesome article
