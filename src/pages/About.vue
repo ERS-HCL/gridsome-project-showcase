@@ -34,11 +34,10 @@
 
           <v-flex
             v-if="item.node.excerpt"
-            class="grey--text"
+            class="grey--text ml-5"
             ellipsis
             hidden-sm-and-down
           >
-            &mdash;
             {{ item.node.excerpt }}
           </v-flex>
         </v-layout>

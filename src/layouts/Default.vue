@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-toolbar dense>
-      <v-toolbar-title class="caption,subheading">
+    <v-toolbar>
+      <v-toolbar-title class="title text-uppercase text-black">
         <g-link :to="{ name: 'home' }">{{ $static.metaData.siteName }}</g-link>
       </v-toolbar-title>
       <v-spacer/>
