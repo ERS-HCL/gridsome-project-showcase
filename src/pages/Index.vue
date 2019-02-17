@@ -62,14 +62,18 @@ export default {
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color 0.3s;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
 .pagination.active {
   background-color: #4caf50;
   color: white;
+  font-weight: bold;
 }
 
 .pagination:hover:not(.active) {
   background-color: #ddd;
+  font-weight: bold;
 }
 </style>
