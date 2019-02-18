@@ -1,5 +1,8 @@
 <template>
   <Layout>
+        <v-layout
+    column
+  >
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <g-image src="~/favicon.png" width="135"/>
     <h1 class="display-2">Hello, world!</h1>
@@ -15,6 +18,7 @@
       {{post.node.excerpt}}
     </p>
     <Pager :info="$page.posts.pageInfo" linkClass="pagination"/>
+        </v-layout>
   </Layout>
 </template>
 
